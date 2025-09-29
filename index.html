@@ -451,6 +451,96 @@
 
 
 
+        /* Leadership Section */
+        .leadership-section {
+            background: var(--white);
+            padding: 4rem 0;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .leader-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-strong);
+            border-color: var(--primary);
+        }
+
+        .leader-image {
+            position: relative;
+            padding-top: 100%;
+            overflow: hidden;
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+        }
+
+        .leader-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .leader-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .leader-name {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-position {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .leader-bio {
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .leader-quote {
+            font-style: italic;
+            color: var(--text-light);
+            position: relative;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .leader-quote::before {
+            content: '\201C';
+            font-size: 3rem;
+            color: var(--primary);
+            position: absolute;
+            top: -1rem;
+            left: 0.5rem;
+            opacity: 0.2;
+        }
+
         /* Academics Section */
         .academics-cards {
             display: grid;
@@ -1109,6 +1199,53 @@
                             <div class="stat-number">95%</div>
                             <div class="stat-label">Success Rate</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+        <div class="section-container">
+            <div class="section-title">
+                <h2>Our Leadership</h2>
+                <p>Guiding Excellence in Education</p>
+            </div>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Principal">
+                    </div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Dr. Rajesh Kumar</h3>
+                        <div class="leader-position">Principal</div>
+                        <p class="leader-bio">With over 25 years of experience in education, Dr. Kumar brings visionary leadership and academic excellence to our institution. Ph.D. in Education from Delhi University with numerous accolades in educational leadership.</p>
+                        <div class="leader-quote">"Education is not preparation for life; education is life itself."</div>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=500&q=80" alt="Vice Principal">
+                    </div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Mrs. Priya Sharma</h3>
+                        <div class="leader-position">Vice Principal</div>
+                        <p class="leader-bio">A dedicated educator with 18 years of experience, Mrs. Sharma oversees academic programs and student development. Masters in Education with specialization in Curriculum Development.</p>
+                        <div class="leader-quote">"Every student has the potential to change the world."</div>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80" alt="Academic Dean">
+                    </div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Dr. Amit Verma</h3>
+                        <div class="leader-position">Academic Dean</div>
+                        <p class="leader-bio">An innovative educator with expertise in modern teaching methodologies, Dr. Verma leads our academic excellence initiatives. Ph.D. in Educational Technology with focus on digital learning.</p>
+                        <div class="leader-quote">"Innovation in education creates leaders of tomorrow."</div>
                     </div>
                 </div>
             </div>
