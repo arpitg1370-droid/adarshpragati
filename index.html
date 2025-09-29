@@ -121,19 +121,31 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 5%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
+            gap: 3rem;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
+            flex-shrink: 0;
         }
 
         .logo img {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            white-space: nowrap;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            padding-right: 2rem;
         }
 
         .logo h1 {
@@ -957,7 +969,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iODAiIGhlaWdodD0iODAiIGZpbGw9IiMyNTYzZWIiIHJ4PSIxMCIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0zMCAyNWg0MHY1MEgzMHoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNTAgMjBMNzAgMzB2NDBMNTAgODAgMzAgNzBWMzB6Ii8+PHRleHQgeD0iNTAiIHk9IjU1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiMyNTYzZWIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFQUzwvdGV4dD48L3N2Zz4=" alt="Adarsh Pragati Hr. Sec. School Logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnR3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMjU2M2ViO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxZDRlZDg7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnb2xkR3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmZkNzAwO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmZmI5MDA7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0OCIgZmlsbD0idXJsKCNiZ0dyYWRpZW50KSIgLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOTUiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MyIgZmlsbD0idXJsKCNiZ0dyYWRpZW50KSIgLz4KICAKICA8IS0tIE1hYSBTYXJhc3dhdGkgU3R5bGl6ZWQgRGVzaWduIC0tPgogIDxwYXRoIGQ9Ik01MCAyMGMtMiAwLTQgNS02IDEwYy0yLTUtNC0xMC02LTEwYy0yIDAtNCA1LTQgMTBjMCA1IDIgMTAgNCAxNWwyIDVjLTQgNS02IDEwLTYgMTVjMCA1IDIgMTAgNiAxNWwyIDVjLTIgNS00IDEwLTQgMTVoMzJjMC01LTItMTAtNC0xNWwyLTVjNC01IDYtMTAgNi0xNWMwLTUtMi0xMC02LTE1bDItNWMyLTUgNC0xMCA0LTE1YzAtNS0yLTEwLTQtMTBjLTIgMC00IDUtNiAxMGMtMi01LTQtMTAtNi0xMHoiIGZpbGw9InVybCgjZ29sZEdyYWRpZW50KSIgb3BhY2l0eT0iMC45NSIvPgogIAogIDwhLS0gVmVlbmEgKEx5cmUpIFN0eWxpemVkIC0tPgogIDxwYXRoIGQ9Ik0zNSA0NWMwIDAgNSA1IDUgMTBjMCA1LTUgMTAtNSAxMGgyMGMwIDAtNS01LTUtMTBjMC01IDUtMTAgNS0xMHoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQwIiByPSIzIiBmaWxsPSJ3aGl0ZSIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNzAiIHI9IjMiIGZpbGw9IndoaXRlIi8+CiAgCiAgPCEtLSBMb3R1cyBTdHlsaXplZCAtLT4KICA8cGF0aCBkPSJNNDUgMjVjMCAwIDUgNSA1IDEwYzAtNSA1LTEwIDUtMTBjLTMtMy03LTMtMTAgMHoiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiLz4KPC9zdmc+" alt="Adarsh Pragati Hr. Sec. School Logo">
                 <h1>Adarsh Pragati Hr. Sec. School</h1>
             </div>
             <div class="nav-links">
